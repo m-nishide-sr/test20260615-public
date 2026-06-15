@@ -1,0 +1,9 @@
+{
+  "name": "My Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/rust:latest",
+  // GPG keys and agent will be automatically forwarded to the DevContainer by VS Code.
+  // GPGの鍵とエージェントはVS Codeによって自動的にDevContainer内へ転送されます。
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  }
+}
