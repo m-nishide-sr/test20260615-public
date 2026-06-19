@@ -6,3 +6,12 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+criterion = "0.8.2"
+tokio = { version = "1", features = ["full"] }
+
+[profile.release]
+lto = true
+
+[[bench]]
+name = "main"
+harness = false         # 👈 これが false になっていることが非常に重要です
