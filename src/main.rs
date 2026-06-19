@@ -3,7 +3,7 @@ use hello_cargo::{fibonacci, fibonacci_loop, fibonacci_async}; // 👈 ライブ
 #[tokio::main]
 async fn main() {
    println!("Hello, world!");
-   println!("fibonacci_async(30):{}", fibonacci_loop(30));
-   println!("fibonacci_async(30):{}", fibonacci(30));
-   println!("fibonacci_async(30):{}", fibonacci_async(30).await);
+   println!("fibonacci_loop(30): {}", fibonacci_loop(30));
+   println!("fibonacci(30): {}", fibonacci(30));
+   println!("fibonacci_async(30): {}", fibonacci_async(30).await);
 }
