@@ -1,4 +1,4 @@
-use hello_cargo::{fibonacci,fibonacci_loop,fibonacci_async}; // 👈 ライブラリからインポート
+use hello_cargo::{fibonacci, fibonacci_loop, fibonacci_async}; // 👈 ライブラリからインポート
 
 #[tokio::main]
 async fn main() {
