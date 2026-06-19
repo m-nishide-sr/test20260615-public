@@ -14,7 +14,8 @@ fn criterion_benchmark(c: &mut Criterion) {
     });
     c.bench_function("fibonacci_async 30 (many threads)", |b| {
         // black_box を使うことで、コンパイラの過剰な最適化（関数のインライン化や計算の事前完了など）を防ぐ
-        b.iter(|| tokio::runtime::Runtime::new().unwrap().block_on(fibonacci_async(black_box(30))))
+        let rt = tokio::runtime::Runtime::new().unwrap();
+        b.iter(|| rt.block_on(fibonacci_async(black_box(30))))
     });
 
     c.bench_function("fibonacci_async 30 (1 thread)", |b| {
